@@ -14,7 +14,7 @@ The recommended way to install Linio Input is [through composer](http://getcompo
 ```JSON
 {
     "require": {
-        "code-community/search": "dev-master"
+        "code-community/search": "v1.0.0"
     }
 }
 ```
