@@ -122,3 +122,89 @@ class EntityRepository extends EntityRepository implements SearchInterface
     }
 }
 ```
+
+The JSON Request will be similar this:
+
+```
+{
+    "search" : {
+        "page" : int, // not required (if not will return all)
+        "maxPerPage" : int, // not required (default: 10)
+
+        // not required
+        "orderBy" : [
+            {
+                "field" : string, // object fields
+                "direction" : string(ASC|DESC), // not required (defalt: ASC),
+            }
+        ],
+        
+        // not required
+        "fieldFilters" : [
+            {
+                "fieldId" : integer, // cannot be repeated
+                "field" : string, // object fields
+                "type" : string(EQUAL_TYPE|DIFFERENT_TYPE|LEFT_LIKE_TYPE|RIGHT_LIKE_TYPE|BOTH_LIKE_TYPE|LIKE_TYPE|IS_NULL_TYPE|IS_NOT_NULL_TYPE)
+                "query" : mixed // not required,
+                "or" : string{fieldId:order} // not required (pattern: /^[0-9]+\:[0-9]+$/)
+                "and" : string{fieldId:order} // not required (pattern: /^[0-9]+\:[0-9]+$/)
+            }
+        ]
+    }
+}
+```
+
+A small example is:
+
+```sql
+SELECT
+    *
+FROM
+    EntityBundle:Entity
+WHERE
+    email = 'rafael@gmail.com'
+    OR (
+        email like 'rafael%'
+        AND email like '%el@gmail.com'
+    )
+ORDER BY
+    email ASC
+```
+​
+```JSON
+{
+    "search" : {
+        "orderBy" : [
+            {
+                "field" : "email"
+            }
+        ],
+        "fieldFilters" : [
+            {
+                "fieldId": 1,
+                "field": "email",
+                "type": "IS_EQUAL_TYPE",
+                "query" : "rafael@gmail.com",
+                "or": "",
+                "and": ""
+            },
+            {
+                "fieldId": 2,
+                "field": "email",
+                "type": "LEFT_LIKE_TYPE",
+                "query" : "rafael",
+                "or": "1:0",
+                "and": ""
+            },
+            {
+                "fieldId": 3,
+                "field": "email",
+                "type": "RIGHT_LIKE_TYPE",
+                "query" : "el@gmail.com",
+                "or": "",
+                "and": "2:0"
+            }
+        ]
+    }
+}
+```
