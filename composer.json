@@ -1,5 +1,7 @@
 {
     "name": "code-community/search",
+    "description": "Mount your search dinamically just following a few steps",
+    "keywords": ["code-community", "code community", "code", "community", "search", "library"],
     "license": "MIT",
     "type": "library",
     "autoload": {
@@ -7,6 +9,12 @@
             "": "src/"
         }
     },
+    "repositories" : [
+        {
+            "type": "vcs",
+            "url":  "git@github.com:code-community/input.git"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "doctrine/common": "2.5.*@dev",
@@ -14,12 +22,6 @@
         "pagerfanta/pagerfanta": "^1.0",
         "linio/input": "dev-master"
     },
-    "repositories" : [
-        {
-            "type": "vcs",
-            "url":  "git@github.com:code-community/input.git"
-        }
-    ],
     "require-dev": {
         "phpunit/phpunit": "4.5.*",
         "phpmd/phpmd": "2.1.*",
