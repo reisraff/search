@@ -1,6 +1,8 @@
 Code Community Search
 =====================
 
+[![Build Status](https://travis-ci.org/code-community/search.svg?branch=master)](https://travis-ci.org/code-community/search)
+
 Code Community Search is good component. It aims to
 abstract HTTP request using Linio input, and with a json request standard you can mount your search dinamically just following a few steps.
 
