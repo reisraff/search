@@ -3,6 +3,16 @@
     "description": "Mount your search dinamically just following a few steps",
     "keywords": ["code-community", "code community", "code", "community", "search", "library"],
     "license": "MIT",
+    "authors" : [
+        {
+            "name" : "Rafael Reis",
+            "email" : "rafaelreis.jesus@gmail.com"
+        },
+        {
+            "name" : "Jeferson Daniel",
+            "email" : "jeferson.daniel412@gmail.com"
+        }
+    ],
     "type": "library",
     "autoload": {
         "psr-4": {
