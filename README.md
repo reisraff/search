@@ -9,7 +9,7 @@ abstract HTTP request using Linio input, and with a json request standard you ca
 Install
 -------
 
-The recommended way to install Linio Input is [through composer](http://getcomposer.org).
+The recommended way to install is [through composer](http://getcomposer.org).
 
 ```JSON
 {
@@ -31,7 +31,7 @@ run PHPUnit.
 Usage
 -----
 
-The library is very easy to use: first, you have to configure the [Linio input](https://github.com/code-community/input/blob/master/README.md)
+The library is very easy to use: first, you have to configure the [Input](https://github.com/code-community/input/blob/master/README.md)
 
 In your input handler:
 
