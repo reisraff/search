@@ -1,7 +1,11 @@
 Code Community Search
 =====================
 
-[![Latest Stable Version](https://poser.pugx.org/code-community/search/v/stable)](https://packagist.org/packages/code-community/search) [![Total Downloads](https://poser.pugx.org/code-community/search/downloads)](https://packagist.org/packages/code-community/search) [![Latest Unstable Version](https://poser.pugx.org/code-community/search/v/unstable)](https://packagist.org/packages/code-community/search) [![License](https://poser.pugx.org/code-community/search/license)](https://packagist.org/packages/code-community/search) [![Build Status](https://travis-ci.org/code-community/search.svg?branch=master)](https://travis-ci.org/code-community/search)
+[![Latest Stable Version](https://poser.pugx.org/code-community/search/v/stable)](https://packagist.org/packages/code-community/search) 
+[![Total Downloads](https://poser.pugx.org/code-community/search/downloads)](https://packagist.org/packages/code-community/search) 
+[![Latest Unstable Version](https://poser.pugx.org/code-community/search/v/unstable)](https://packagist.org/packages/code-community/search) 
+[![License](https://poser.pugx.org/code-community/search/license)](https://packagist.org/packages/code-community/search) 
+[![Build Status](https://travis-ci.org/code-community/search.svg?branch=master)](https://travis-ci.org/code-community/search) 
 
 Code Community Search is good component. It aims to
 abstract HTTP request using Linio input, and with a json request standard you can mount your search dinamically just following a few steps.
